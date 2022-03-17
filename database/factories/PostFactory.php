@@ -2,10 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use JetBrains\PhpStorm\ArrayShape;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Post>
+ * @extends Factory
  */
 class PostFactory extends Factory
 {
@@ -14,10 +17,13 @@ class PostFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    #[ArrayShape(['user_id' => "mixed", 'category_id' => "mixed", 'title' => "string", 'content' => "string"])] public function definition(): array
     {
         return [
-            //
+            'user_id' => User::inRandomOrder()->first()->id,
+            'category_id' => Category::inRandomOrder()->first()->id,
+            'title' => $this->faker->sentence,
+            'content' => $this->faker->paragraph(5),
         ];
     }
 }
