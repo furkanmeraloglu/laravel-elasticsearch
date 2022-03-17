@@ -12,13 +12,10 @@
 </div>
 
 ### About the Project
-It's a simple Laravel project that aims to utilize Elasticsearch as a search/index. The Laravel - Elasticsearch integration is conducted via Laravel's out-of-package HTTP Client. No Elasticsearch library is used for educative purposes.
+It's a simple Laravel `Forum` project that aims to utilize Elasticsearch as a search/index. The Laravel - Elasticsearch integration is conducted via Laravel's out-of-package HTTP Client. No Elasticsearch library is used for educative purposes.
 Postgresql is used as the default database. Redis is used for queueable jobs. Mailhog is used for e-mail operations and testing.
 
-This project also benefits Pest instead of Phpunit. 
-
-
-
+This project also benefits Pest instead of Phpunit.
 ### Libraries and Dependencies
 - Laravel/UI with Bootstrap and Auth Scaffolding
   - `composer require laravel/ui`
@@ -33,3 +30,14 @@ This project also benefits Pest instead of Phpunit.
 - Laravel Query Detector 
   - `composer require beyondcode/laravel-query-detector --dev`
 - Laravel Pest
+  - `compser require pestphp/pest --dev --with-all-dependencies`
+  - `composer require pestphp/pest-plugin-laravel --dev`
+  - `php artisan pest:install`
+### Installing the Project
+- Clone the library on your local machine
+  - `git clone git@github.com:furkanmeraloglu/laravel-elasticsearch.git`
+- Modify `.env` file for database, Elasticsearch, Redis and Mailhog configurations.
+- Generate an application key
+  - `php artisan key:generate`
+- Install composer dependencies 
+  - `composer install`
