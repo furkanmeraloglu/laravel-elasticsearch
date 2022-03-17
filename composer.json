@@ -11,6 +11,8 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "laravel/ui": "^3.4",
+        "overtrue/laravel-favorite": "^5.0",
+        "overtrue/laravel-follow": "^4.0",
         "overtrue/laravel-like": "^5.0"
     },
     "require-dev": {
