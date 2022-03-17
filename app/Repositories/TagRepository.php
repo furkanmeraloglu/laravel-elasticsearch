@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-class TagRepository
+class TagRepository implements \App\Interfaces\TagRepositoryInterface
 {
 
 }

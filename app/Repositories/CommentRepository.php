@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-class CommentRepository
+class CommentRepository implements \App\Interfaces\CommentRepositoryInterface
 {
 
 }

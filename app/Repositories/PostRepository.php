@@ -2,7 +2,9 @@
 
 namespace App\Repositories;
 
-class PostRepository
+use App\Interfaces\PostRepositoryInterface;
+
+class PostRepository implements PostRepositoryInterface
 {
 
 }

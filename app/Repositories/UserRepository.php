@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-class UserRepository
+class UserRepository implements \App\Interfaces\UserRepositoryInterface
 {
 
 }
